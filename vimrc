@@ -81,3 +81,71 @@ nnoremap <Down> :echoe "Use j"<CR>
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
+" <Space> is the leader character
+let mapleader = " "
+
+" Edit the README_FOR_APP (makes :R commands work)
+map <Leader>R :e doc/README_FOR_APP<CR>
+
+" Hide search highlighting
+map <Leader>l :set invhls <CR>
+
+" Opens an edit command with the path of the currently edited file filled in
+" Normal mode: <Leader>e
+map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+
+" Opens a tab edit command with the path of the currently edited file filled in
+" Normal mode: <Leader>t
+map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+
+" Inserts the path of the currently edited file into a command
+" Command mode: Ctrl+P
+cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+
+" Maps autocomplete to tab
+imap <Tab> <C-P>
+
+" Duplicate a selection
+" Visual mode: D
+vmap D y'>p
+
+" No Help, please
+nmap <F1> <Esc>
+
+" Press Shift+P while in visual mode to replace the selection without
+" overwriting the default register
+vmap P p :call setreg('"', getreg('0')) <CR>
+
+" Rails shortcuts
+nmap <Leader>p :Rstep 
+nmap <Leader>sp :RSstep 
+nmap <Leader>tp :RTstep 
+nmap <Leader>m :Rmodel 
+nmap <Leader>c :Rcontroller 
+nmap <Leader>v :Rview 
+nmap <Leader>u :Runittest 
+nmap <Leader>f :Rfunctionaltest 
+nmap <Leader>i :Rintegrationtest 
+nmap <Leader>h :Rhelper 
+nmap <Leader>tm :RTmodel 
+nmap <Leader>tc :RTcontroller 
+nmap <Leader>tv :RTview 
+nmap <Leader>tu :RTunittest 
+nmap <Leader>tf :RTfunctionaltest 
+nmap <Leader>ti :RTintegrationtest 
+nmap <Leader>sm :RSmodel 
+nmap <Leader>sc :RScontroller 
+nmap <Leader>sv :RSview 
+nmap <Leader>su :RSunittest 
+nmap <Leader>sf :RSfunctionaltest 
+nmap <Leader>si :RSintegrationtest 
+nmap <Leader>g :Rconfig 
+nmap <Leader>sg :RSconfig 
+nmap <Leader>tg :RTconfig 
+
+" Window navigation
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+
+" Snippets are activated by Shift+Tab
+let g:snippetsEmu_key = "<S-Tab>"
