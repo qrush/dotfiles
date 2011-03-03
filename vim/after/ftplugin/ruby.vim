@@ -195,3 +195,5 @@ nmap <Leader>nm gg/^\s\+\(private\\|protected\)\\|^end<Enter>kO<Enter>
 " Surround a variable in a string with inspect
 nmap <buffer> yiv ysiw}i#<Esc>f}i.inspect<Esc>
 
+nmap <buffer> yh lF:xEpf=dW
+
