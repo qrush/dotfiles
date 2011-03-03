@@ -1,19 +1,35 @@
-" Webrat steps
-Snippet press When I press "<{}>"
-Snippet follow When I follow "<{}>"
-Snippet fillin When I fill in "<{field}>" with "<{}>"
-Snippet select When I select "<{value}>" from "<{}>"
-Snippet check When I check "<{}>"
-Snippet uncheck When I uncheck "<{}>"
-Snippet choose When I choose "<{}>"
-Snippet see Then I should see "<{}>"
-Snippet notsee Then I should not see "<{}>"
-Snippet visit When I visit <{}>
+function! PrefixStep(type)
+  let lineno = line(".") - 1
+  let line = getline(lineno)
+
+  while match(line, "^\\s\\+And") != -1
+    let lineno = lineno - 1
+    let line = getline(lineno)
+  endwhile
+
+  if match(line, "^\\s\\+" . a:type, "") == -1
+    return a:type
+  else
+    return "And"
+  endif
+endfunction
+
+" Capybara steps
+Snippet press ``PrefixStep("When")`` I press "<{}>"
+Snippet follow ``PrefixStep("When")`` I follow "<{}>"
+Snippet fillin ``PrefixStep("When")`` I fill in "<{field}>" with "<{}>"
+Snippet select ``PrefixStep("When")`` I select "<{value}>" from "<{}>"
+Snippet check ``PrefixStep("When")`` I check "<{}>"
+Snippet uncheck ``PrefixStep("When")`` I uncheck "<{}>"
+Snippet choose ``PrefixStep("When")`` I choose "<{}>"
+Snippet go ``PrefixStep("When")`` I go to the <{}>
+Snippet see ``PrefixStep("Then")`` I should see "<{}>"
+Snippet notsee ``PrefixStep("Then")`` I should not see "<{}>"
 
 " Factory steps
-Snippet exist Given a <{factory}> exists with a <{attribute}> of "<{}>"
-Snippet texist Given the following <{factory}> exists:<CR>| <{}> |
-Snippet mexist Given the following <{factory}>s exist:<CR>| <{}> |
+Snippet exist ``PrefixStep("Then")`` a <{factory}> exists with a <{attribute}> of "<{}>"
+Snippet texist ``PrefixStep("Then")`` the following <{factory}> exists:<CR>| <{}> |
+Snippet mexist ``PrefixStep("Then")`` the following <{factory}>s exist:<CR>| <{}> |
 
 function! AlignAsciiTable()
   let startline = line(".")
