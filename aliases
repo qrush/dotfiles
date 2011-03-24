@@ -12,6 +12,7 @@ alias gci="git pull --rebase && rake && git push"
 alias tlf="tail -f"
 alias b="bundle"
 alias be="bundle exec"
+alias r="rails"
 
 alias eydeploy="ey deploy -e \${\$(pwd):t}_staging"
 alias eypending="git log \$(ey ssh \"cat /data/\${\$(pwd):t}/current/REVISION\" -e \${\$(pwd):t}_production)..origin/master"
