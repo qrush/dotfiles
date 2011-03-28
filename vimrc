@@ -72,6 +72,12 @@ let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
 autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=routes
 
+" Javascript navigation commands
+autocmd User Rails Rnavcommand jmodel public/javascripts/models -glob=**/* -suffix=.js
+autocmd User Rails Rnavcommand jcontroller public/javascripts/controllers -glob=**/* -suffix=.js
+autocmd User Rails Rnavcommand jview public/javascripts/views -glob=**/* -suffix=.js
+autocmd User Rails Rnavcommand jcollection public/javascripts/collections -glob=**/* -suffix=.js
+
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
@@ -142,6 +148,18 @@ nmap <Leader>si :RSintegrationtest
 nmap <Leader>g :Rconfig 
 nmap <Leader>sg :RSconfig 
 nmap <Leader>tg :RTconfig 
+nmap <Leader>jm :Rjmodel  
+nmap <Leader>sjm :RSjmodel 
+nmap <Leader>tjm :RTjmodel 
+nmap <Leader>jc :Rjcontroller  
+nmap <Leader>sjc :RSjcontroller 
+nmap <Leader>tjc :RTjcontroller 
+nmap <Leader>jv :Rjview  
+nmap <Leader>sjv :RSjview 
+nmap <Leader>tjv :RTjview 
+nmap <Leader>jl :Rjcollection  
+nmap <Leader>sjl :RSjcollection 
+nmap <Leader>tjl :RTjcollection 
 
 " Window navigation
 nmap <C-J> <C-W><C-J>
