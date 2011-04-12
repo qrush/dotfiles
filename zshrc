@@ -63,3 +63,9 @@ setopt CORRECT CORRECT_ALL
 
 # Enable extended globbing
 setopt EXTENDED_GLOB
+
+# load in aliases
+source ~/.zshenv
+
+# load history
+export HISTFILE=~/.history
