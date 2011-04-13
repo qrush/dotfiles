@@ -68,7 +68,7 @@ setopt CORRECT CORRECT_ALL
 setopt EXTENDED_GLOB
 
 # load in aliases
-source ~/.zshenv
+source ~/.aliases
 
 # awesome completion from zshkit
 zstyle ':completion:*' completer _expand _complete
