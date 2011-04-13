@@ -20,3 +20,10 @@ export PATH=$PATH:/Users/qrush/Dev/java/code_swarm/bin
 
 # RVM woot!
 if [[ -s /Users/qrush/.rvm/scripts/rvm ]] ; then source /Users/qrush/.rvm/scripts/rvm ; fi
+
+# load history
+export HISTFILE=~/.history
+
+# put home and dev dir on cdpath
+cdpath=(~ ~/Dev)
+typeset -gU cdpath
