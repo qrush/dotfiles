@@ -36,8 +36,15 @@ setopt prompt_subst
 # prompt
 export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
 
-# ignore duplicate history entries
-setopt histignoredups
+# ignore duplicate history entries, share history between sessions
+setopt SHARE_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_VERIFY
+setopt HIST_APPEND
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_SPACE
 
 # keep TONS of history
 export HISTSIZE=4096
