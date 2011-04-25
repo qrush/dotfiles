@@ -2,8 +2,10 @@ alias migrate="rake db:migrate db:test:prepare"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
 alias remongrate="rake mongoid:migrate && rake mongoid:migrate:redo"
 alias g="git"
-alias s="bundle exec rspec"
-alias cuc="bundle exec cucumber"
+alias s="bundle exec rspec --format=documentation"
+alias rs="bundle exec rspec --drb --format=documentation"
+alias cuc="bundle exec cucumber --format=pretty"
+alias rc="bundle exec cucumber --drb"
 alias gi="gem install"
 alias giv="gem install -v"
 alias gci="git pull --rebase && rake && git push"
@@ -16,8 +18,14 @@ alias ...='../..'
 alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
+alias r="rails"
 
 alias -g G='| grep'
 alias -g M='| less'
 alias -g L='| wc -l'
 alias -g ONE="| awk '{ print \$1}'"
+
+alias eydeploy="ey deploy -e \${\$(pwd):t}_staging"
+alias eypending="git log \$(ey ssh \"cat /data/\${\$(pwd):t}/current/REVISION\" -e \${\$(pwd):t}_production)..origin/master"
+alias hdeploy="git push heroku master && heroku rake db:migrate"
+alias hconsole="heroku console"

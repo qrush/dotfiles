@@ -2,10 +2,11 @@
 export ARCHFLAGS='-arch x86_64'
 
 # go compiler appeasement
-export GOROOT=`brew --cellar`/go/HEAD
-export GOBIN=/usr/local/bin
-export GOARCH=x86_64
+export GOROOT=/Users/qrush/go/src
+export GOBIN=/Users/qrush/go/src/bin
+export GOARCH=386
 export GOOS=darwin
+export PATH=$PATH:/Users/qrush/go/src/bin
 
 # favor homebrew
 export PATH=/usr/local/bin:$PATH
