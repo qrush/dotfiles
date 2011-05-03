@@ -36,18 +36,23 @@ setopt prompt_subst
 # prompt
 export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
 
-# ignore duplicate history entries, share history between sessions
-setopt SHARE_HISTORY
-setopt EXTENDED_HISTORY
-setopt HIST_VERIFY
-setopt HIST_APPEND
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_REDUCE_BLANKS
-setopt HIST_IGNORE_SPACE
-
 # keep TONS of history
-export HISTSIZE=4096
+export HISTSIZE=10000
+export SAVEHIST=10000
+
+# bring in history options from oh-my-zsh
+setopt hist_ignore_dups # ignore duplication command history list
+setopt share_history # share command history data
+
+setopt hist_verify
+setopt inc_append_history
+setopt extended_history
+setopt hist_expire_dups_first
+
+setopt hist_ignore_space
+
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
 
 # look for ey config in project dirs
 export EYRC=./.eyrc
