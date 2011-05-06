@@ -2,7 +2,8 @@
 --type-add=html=.html.erb,.html.haml
 --type-add=js=.js.erb
 --type-add=css=.sass,.less
---type-add=jst=.jst
+--type-set=jst=.jst
+--type-set=md=.md
 --type-set=cucumber=.feature
 --ignore-dir=vendor
 --ignore-dir=log
