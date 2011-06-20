@@ -18,7 +18,6 @@ alias ...='../..'
 alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
-alias r="rails"
 
 alias -g G='| grep'
 alias -g M='| less'
