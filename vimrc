@@ -53,9 +53,8 @@ colorscheme vividchalk
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
-" Numbers
-set number
-set numberwidth=5
+" Enable relative line numbers
+set relativenumber
 
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
@@ -166,9 +165,6 @@ nmap <C-K> <C-W><C-K>
 
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
-
-" Enable relative line numbers
-set relativenumber
 
 " Ignore files on completion
 set wildignore=*.rbc
