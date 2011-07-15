@@ -1,6 +1,7 @@
-alias migrate="rake db:migrate db:test:prepare"
-alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
-alias remongrate="rake mongoid:migrate && rake mongoid:migrate:redo"
+alias bake='bundle exec rake'
+alias migrate="bake db:migrate db:test:prepare"
+alias remigrate="bake db:migrate && bake db:migrate:redo && bake db:schema:dump db:test:prepare"
+alias remongrate="bake mongoid:migrate && bake mongoid:migrate:redo"
 alias g="git"
 alias s="bundle exec rspec --format=documentation"
 alias rs="bundle exec rspec --drb --format=documentation"
