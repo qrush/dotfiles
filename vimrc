@@ -75,6 +75,7 @@ autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=rou
 " Javascript navigation commands
 autocmd User Rails Rnavcommand jmodel public/javascripts/models -glob=**/* -suffix=.js
 autocmd User Rails Rnavcommand jcontroller public/javascripts/controllers -glob=**/* -suffix=.js
+autocmd User Rails Rnavcommand jrouter public/javascripts/routers -glob=**/* -suffix=.js
 autocmd User Rails Rnavcommand jview public/javascripts/views -glob=**/* -suffix=.js
 autocmd User Rails Rnavcommand jcollection public/javascripts/collections -glob=**/* -suffix=.js
 
