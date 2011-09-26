@@ -79,6 +79,13 @@ autocmd User Rails Rnavcommand jrouter public/javascripts/routers -glob=**/* -su
 autocmd User Rails Rnavcommand jview public/javascripts/views -glob=**/* -suffix=.js
 autocmd User Rails Rnavcommand jcollection public/javascripts/collections -glob=**/* -suffix=.js
 
+" Coffeescript navigation commands
+autocmd User Rails Rnavcommand cmodel app/assets/models -glob=**/* -suffix=.coffee
+autocmd User Rails Rnavcommand ccontroller app/assets/controllers -glob=**/* -suffix=.coffee
+autocmd User Rails Rnavcommand crouter app/assets/routers -glob=**/* -suffix=.coffee
+autocmd User Rails Rnavcommand cview app/assets/views -glob=**/* -suffix=.coffee
+autocmd User Rails Rnavcommand ccollection app/assets/collections -glob=**/* -suffix=.coffee
+
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
