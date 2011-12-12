@@ -26,5 +26,27 @@ if [[ -s /Users/qrush/.rvm/scripts/rvm ]] ; then source /Users/qrush/.rvm/script
 export HISTFILE=~/.history
 
 # put home and dev dir on cdpath
-cdpath=(~ ~/Dev)
+cdpath=(~ ~/Dev ~/37s/apps)
 typeset -gU cdpath
+
+# rbenv
+export PATH="/Users/qrush/.rbenv/shims:${PATH}"
+source "/usr/local/Cellar/rbenv/0.2.1/libexec/../completions/rbenv.zsh"
+rbenv rehash 2>/dev/null
+function rbenv() {
+  command="$1"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
+
+  case "$command" in
+  shell)
+    eval `rbenv "sh-$command" "$@"`;;
+  *)
+    command rbenv "$command" "$@";;
+  esac
+}
+
+# local bin
+export PATH=./bin:$PATH:/Users/qrush/bin
+eval "$($HOME/.37/bin/37 init -)"

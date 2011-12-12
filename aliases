@@ -20,6 +20,12 @@ alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
 
+alias t="ruby -Itest"
+alias tp="PAUSE=1 ruby -Itest"
+alias ti="rake test:integration"
+alias tf="rake test:functionals"
+alias tu="rake test:units"
+
 alias -g G='| grep'
 alias -g M='| less'
 alias -g L='| wc -l'
@@ -29,3 +35,5 @@ alias eydeploy="ey deploy -e \${\$(pwd):t}_staging"
 alias eypending="git log \$(ey ssh \"cat /data/\${\$(pwd):t}/current/REVISION\" -e \${\$(pwd):t}_production)..origin/master"
 alias hdeploy="git push heroku master && heroku rake db:migrate"
 alias hconsole="heroku console"
+
+alias git=hub
