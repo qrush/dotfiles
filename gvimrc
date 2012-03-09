@@ -12,4 +12,5 @@ if filereadable($HOME . "/.gvimrc.local")
   source ~/.gvimrc.local
 endif
 
-set guifont=Mensch:h14
+set guifont=Mensch\ for\ Powerline:h14
+let g:Powerline_symbols = 'fancy'
