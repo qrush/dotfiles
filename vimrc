@@ -72,19 +72,14 @@ let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
 autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=routes
 
-" Javascript navigation commands
-autocmd User Rails Rnavcommand jmodel public/javascripts/models -glob=**/* -suffix=.js
-autocmd User Rails Rnavcommand jcontroller public/javascripts/controllers -glob=**/* -suffix=.js
-autocmd User Rails Rnavcommand jrouter public/javascripts/routers -glob=**/* -suffix=.js
-autocmd User Rails Rnavcommand jview public/javascripts/views -glob=**/* -suffix=.js
-autocmd User Rails Rnavcommand jcollection public/javascripts/collections -glob=**/* -suffix=.js
+" Sprocket assets
+autocmd User Rails Rnavcommand jasset app/assets/javascripts -glob=**/* -suffix=.coffee
+autocmd User Rails Rnavcommand jlasset lib/assets/javascripts -glob=**/* -suffix=.coffee
+autocmd User Rails Rnavcommand jvasset vendor/assets/javascripts -glob=**/* -suffix=.coffee
 
-" Coffeescript navigation commands
-autocmd User Rails Rnavcommand cmodel app/assets/models -glob=**/* -suffix=.coffee
-autocmd User Rails Rnavcommand ccontroller app/assets/controllers -glob=**/* -suffix=.coffee
-autocmd User Rails Rnavcommand crouter app/assets/routers -glob=**/* -suffix=.coffee
-autocmd User Rails Rnavcommand cview app/assets/views -glob=**/* -suffix=.coffee
-autocmd User Rails Rnavcommand ccollection app/assets/collections -glob=**/* -suffix=.coffee
+autocmd User Rails Rnavcommand sasset app/assets/stylesheets -glob=**/* -suffix=.scss
+autocmd User Rails Rnavcommand slasset lib/assets/stylesheets -glob=**/* -suffix=.scss
+autocmd User Rails Rnavcommand svasset vendor/assets/stylesheets -glob=**/* -suffix=.scss
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
