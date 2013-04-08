@@ -6,3 +6,4 @@ tmp/tags
 .DS_Store
 *.swp
 tmp/todo*
+*.swo

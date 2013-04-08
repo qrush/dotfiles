@@ -1,15 +1,14 @@
 # ADD LOCAL CONFIGURATION HERE
 
-
 # DO NOT EDIT BELOW THIS LINE
 [push]
   default = tracking
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+  diff = auto
+  status = auto
+  branch = auto
 [core]
-	excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
 [alias]
@@ -32,3 +31,17 @@
   ap = commit --amend -C HEAD
   co = checkout
   adi = !git add -u && git add . && git diff --cached
+  br = branch
+  dc = diff --cached
+  ours = checkout --ours
+  theirs = checkout --theirs
+  pp = !git plre && git push
+  cp = cherry-pick
+  lp = log -p
+  ls = log --stat
+  lsp = log -p --stat
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  graphy = log --graph --pretty=format:'%h %d' --abbrev-commit --date=relative
+  vim = !vim .git/index
+[rerere]
+  enabled = 1
