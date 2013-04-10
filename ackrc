@@ -9,8 +9,11 @@
 --ignore-dir=vendor
 --ignore-dir=log
 --ignore-dir=tmp
+--ignore-dir=public/emoji
 --ignore-dir=doc
+--ignore-dir=build
 --ignore-dir=coverage
+--ignore-dir=_site
 --sort-files
 --color
 --follow
