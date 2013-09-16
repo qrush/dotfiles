@@ -194,3 +194,5 @@ endfunction
 
 " Hit ^W twice to close all splits and tabs
 nmap <C-W><C-W> <C-W><C-O>:tabo<CR>
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
