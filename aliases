@@ -34,7 +34,6 @@ alias eypending="git log \$(ey ssh \"cat /data/\${\$(pwd):t}/current/REVISION\" 
 alias hdeploy="git push heroku master && heroku rake db:migrate"
 alias hconsole="heroku console"
 
-alias git=hub
 
 alias b="bundle"
 alias be="bundle exec"
