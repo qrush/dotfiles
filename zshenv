@@ -42,3 +42,4 @@ function rbenv() {
 # local bin
 export PATH=./bin:$PATH:/Users/qrush/bin
 eval "$($HOME/.37/bin/37 init -)"
+eval "$($HOME/.meg/bin/meg init -)"
