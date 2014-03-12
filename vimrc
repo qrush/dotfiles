@@ -58,6 +58,7 @@ let g:snippetsEmu_key = "<S-Tab>"
 
 " Tab completion options
 set wildmode=list:longest,list:full
+set wildignore+=_site/*
 set complete=.,w,t
 
 " Tags

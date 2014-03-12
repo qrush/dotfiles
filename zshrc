@@ -124,3 +124,4 @@ zstyle ':completion:*:default' list-prompt '%S%M matches%s'
 autoload -Uz compinit
 compinit
 function g() { exec open "http://google.com/search?q=$1" }
+
