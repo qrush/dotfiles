@@ -23,7 +23,7 @@ typeset -gU cdpath
 
 # rbenv
 export PATH="/Users/qrush/.rbenv/shims:${PATH}"
-source "/usr/local/Cellar/rbenv/0.4.0/libexec/../completions/rbenv.zsh"
+source "/usr/local/Cellar/rbenv/HEAD/completions/rbenv.zsh"
 rbenv rehash 2>/dev/null
 function rbenv() {
   command="$1"
